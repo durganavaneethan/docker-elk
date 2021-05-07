@@ -1,6 +1,6 @@
 #!/bin/bash
 set -x
-git clone -b V1.2 https://github.com/durganavaneethan/docker-elk.git
+git clone -b V1.4 https://github.com/durganavaneethan/docker-elk.git
 cd docker-elk
 docker-compose up -d
 docker pull durganavanee/observability_poc_logstash:v2.0
