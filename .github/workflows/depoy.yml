@@ -1,0 +1,23 @@
+name: Deploy Remote website
+on: 
+ push:
+  branches: [main]
+
+jobs:
+  build-and-deploy:
+    name: deploy
+    runs-on: ubuntu-latest
+    steps:
+    # checkout the repo
+    - name: executing remote ssh commands using ssh key
+      uses: appleboy/ssh-action@master
+      with:
+        host: dev-bas-devops.nac.ibm.com
+        username:  durga
+        password:  fXwnGC3p9mu0U2G
+        port: 22
+        script: |
+               whoami
+               ls -l
+               pwd
+               git pull origin master
