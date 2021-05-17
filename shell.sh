@@ -1,13 +1,13 @@
 #!/bin/bash
 set -x
-git clone -b V1.4 https://github.com/durganavaneethan/docker-elk.git
+git clone -b V1.7 https://github.com/durganavaneethan/docker-elk.git
 cd docker-elk
 docker-compose up -d
-docker pull durganavanee/observability_poc_logstash:v2.0
+docker pull durganavanee/observability_poc_logstash:v7.0
 sleep 20
-docker pull durganavanee/observability_poc_elasticsearch:v2.0
+docker pull durganavanee/observability_poc_elasticsearch:v7.0
 sleep 20
-docker pull durganavanee/observability_poc_kibana:v2.0
+docker pull durganavanee/observability_poc_kibana:v7.0
 sleep 20
 docker images
 docker ps
